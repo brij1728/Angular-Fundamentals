@@ -4,12 +4,17 @@ import { Component } from '@angular/core';
   selector: 'events-list',
   template: `
     <div>
-      <h1>Upcoming Angular Events</h1>
-      <div class="row">
-        <div *ngFor="let event of events">
-          <event-thumbnail #thumbnail [event]="event"></event-thumbnail>
+      <h1 class="display-4">Upcoming Angular Events</h1>
+
+      <section class="container-fluid  ">
+        <div class="row row-cols-3 p-4">
+          <!-- <div class="col-sm"> -->
+          <section *ngFor="let event of events">
+            <hr />
+            <event-thumbnail #thumbnail [event]="event"></event-thumbnail>
+          </section>
         </div>
-      </div>
+      </section>
     </div>
   `,
 })

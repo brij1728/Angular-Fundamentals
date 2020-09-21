@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'event-thumbnail',
-  template: ` <div class="well hoverwell thumbnail">
+  template: ` <section class="well hoverwell thumbnail">
     <h2>{{ event.name }}</h2>
     <div>Date: {{ event.date }}</div>
     <div
@@ -22,7 +22,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         >{{ event.location.city }}, {{ event.location.country }}</span
       >
     </div>
-  </div>`,
+</section>`,
 
   styles: [
     `
