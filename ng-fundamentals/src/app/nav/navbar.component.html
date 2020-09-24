@@ -76,11 +76,15 @@
 
       <ul class="navbar-nav mr-right">
         <li class="nav-item">
+          <a *ngIf="!auth.isAuthenticated()" [routerLink]="['user/login']"
+            >Login</a
+          >
           <a
+            *ngIf="auth.isAuthenticated()"
             class="nav-link"
             [routerLink]="['user/profile']"
             routerLinkActive="active"
-            >Welcome Brijesh</a
+            >Welcome {{ auth.currentUser.firstName }}</a
           >
         </li>
       </ul>

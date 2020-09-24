@@ -1,5 +1,6 @@
 import { style } from '@angular/animations';
 import { Component } from '@angular/core';
+import { AuthService } from '../user/auth.service';
 
 @Component({
   selector: 'nav-bar',
@@ -21,4 +22,6 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class NavBarComponent {}
+export class NavBarComponent {
+  constructor(public auth: AuthService){}
+}
